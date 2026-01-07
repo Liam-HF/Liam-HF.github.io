@@ -226,7 +226,7 @@ section#hero {
 /* About section */
 .about_content {
   padding: var(--space-xl) 0;
-  transform: skewX(-5deg);
+  transform: skewX(0deg);
 }
 
 @media (max-width: 468px) {
@@ -257,4 +257,15 @@ section#about {
   background-color: #ffffff;
   color: #333;
   --color-accent: #ffd700;
+}
+
+/* projects section */
+.project_logos {
+  margin-top: var(--space-xl);
+}
+
+section#projects {
+  background-color: #87ceeb;
+  color: #0c0c0c;
+  --color-accent: #2e8b57;
 }
