@@ -151,6 +151,9 @@ h6,
 .flex_center {
   justify-content: center;
 }
+.flex_left {
+  justify-content: left;
+}
 .flex_around {
   justify-content: space-around;
 }
@@ -228,6 +231,17 @@ section#hero {
   --color-accent: #8a2be2;
 }
 
+section#hero_riscv {
+  background: linear-gradient(rgba(26, 26, 64, 0.9), rgba(26, 26, 64, 0.9)),
+    url("/assets/CPU.jpg");
+  padding-bottom: 4px;
+  background-size: cover;
+  background-position: top;
+  background-attachment: scroll;
+  color: #fafafa;
+  --color-accent: #8a2be2;
+}
+
 /* About section */
 .about_content {
   padding: var(--space-xl) 0;
@@ -249,8 +263,8 @@ section#hero {
 }
 
 .about_img {
-  width: 300px;
-  height: 200px;
+  width: 434px;
+  height: 397px;
   object-fit: cover;
 }
 
