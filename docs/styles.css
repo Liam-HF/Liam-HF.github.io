@@ -232,7 +232,7 @@ section#hero {
 }
 
 section#hero_riscv {
-  background: linear-gradient(rgba(26, 26, 64, 0.9), rgba(26, 26, 64, 0.9)),
+  background: linear-gradient(rgba(26, 26, 64, 0.9), rgba(66, 26, 64, 0.9)),
     url("/assets/CPU.jpg");
   padding-bottom: 4px;
   background-size: cover;
@@ -263,8 +263,8 @@ section#hero_riscv {
 }
 
 .about_img {
-  width: 434px;
-  height: 397px;
+  width: 500px;
+  height: 200px;
   object-fit: cover;
 }
 
@@ -275,6 +275,67 @@ section#hero_riscv {
 section#about {
   background-color: #ffffff;
   color: #333;
+  --color-accent: #ffd700;
+}
+
+/* Alternate About (main) */
+/* About section */
+.amain_content {
+  padding: var(--space-xl) 0;
+  transform: skewX(0deg);
+}
+
+.amain_figure {
+  padding: var(--space-xl) 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ccc;
+  display: inline-block;
+  padding: 5px;
+}
+
+.amain_img {
+  width: 500px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.amain_caption {
+  padding: var(--space-3xs) 0;
+}
+
+section#amain {
+  background-color: #d4cccc;
+  color: #16171c;
+  --color-accent: #ffd700;
+}
+
+/* extra section */
+.extra_content {
+  padding: var(--space-xl) 0;
+  transform: skewX(0deg);
+}
+
+.extra_figure {
+  padding: var(--space-xl) 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ccc;
+  display: inline-block;
+  padding: 5px;
+}
+
+.extra_img {
+  width: 500px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.extra_caption {
+  padding: var(--space-3xs) 0;
+}
+
+section#extra {
+  background-color: #ecebf7;
+  color: #000000;
   --color-accent: #ffd700;
 }
 

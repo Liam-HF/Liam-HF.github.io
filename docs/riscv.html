@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>OATLAB</title>
+    <title>RISCV PROCESSOR</title>
   </head>
   <body>
     <header class="site_header">
@@ -23,6 +23,83 @@
             <div class="text_center hero_content">
               <h1 class="h2">The Project</h1>
               <p class="h5">Designing and Implementing a RISC-V Processor</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="amain">
+        <div class="wrapper">
+          <div class="text_center">
+            <h3>
+              Design Challenge
+            </h3>
+          </div>
+          <div class="wrapper_inner">
+            <div class="about_content flex flex_around">
+              <p class="h6">
+                Me and my team were tasked with designing a multicycle RISC-V processor in System Verilog. This foundational component of computing would be developed with the capability to run almost the entire RISC-V instruction set in assembly, with only a few exceptions due to extra hardware needed. Learning, from the ground up how computers work via a hands-on challenge really increased my appreciation for coding and computer engineering as a whole             </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="extra">
+        <div class="wrapper">
+          <div class="text_center">
+            <h3>
+              RISC-V Processor Components
+            </h3>
+          </div>
+          <div class="wrapper_inner">
+            <div class="about_content flex flex_around">
+              <p class="h6">
+                We made the processor by breaking down its functionality into the parts described below. <br>
+
+                <b> Instruction Decoder: </b> The Instruction Decoder takes instructions from a list of instructions that were given to us and breaks down the 32 bits into actionable events. The Decoder has nine different instructions that it can do. The decoder tells which numbers to use, what to do to them, and where in the instructions we should go. <br>
+                <b>Controller: </b> The Controller keeps track of which actions have accured and when each action should take place. 14 function states can happen. The flow is often in 5 main stages, and the controller makes sure that each stage is fully completed before going to the next one.  The first stage fetches instruction, then decode, executes, memory access and write back. The Controller will track when each module should be active and when it needs to be called on. <br>
+                <b>Program Counter: </b>The program counter holds the address of the next instructions to be executed by the processor. Our PC is controlled by the PCWrite signal, which reads high when the PC needs to move on to the next address to be used. If the PCWrite signal is high, it will rewrite the address stored in current_pc. If it is low, we keep the current address that is stored. <br>
+                <b>Register File: </b> The register file tracks all 32 registers (each of which is 32 bits wide) in the processor. The value of each register is initialized with a value of 0. The reg file is controlled by the RegWrite signal. When it is high, it will both read from the specified registers as well as write a specified value to a destination register. When it is low, it will only read the values from the first and second source register. Note that the first register cannot be overwritten and will always have a value of 0. <br>
+                <b>ALU Unit: </b>The Arithmetic Logic Unit (ALU) does the main computations of the operations. Our ALU receives two numbers that are called A and B. Those numbers are either from the registers, memory, or are hard-coded in.  The ALU can handle 11 operations, including ADD/SUB, bitwise logic (AND/OR/NOR), logical/arithmetic shifts, and set-less-than comparisons. The operations and numbers both come from the Controller file. 
+                <b>Immediate Extender: </b>The immediate extender takes the immed12 and/or immed20 value with either extra 0’s or a specific sign. It is controlled by the ImmSrc signal, which is 4 bits. The signal will determine if the immed value is extended with 0s or a sign. <br>
+                <b>Top: </b> Top combines all the functionality of our individual modules together. It also controls current instruction, read address, and write address. <br>
+                <b> Simulation: </b> Below is an iverilog simulation of the processor running through several instructions, showing the state of some relevant values as it increments through the program <br>
+                <img
+                    src="/assets/RISC_V_Proof" 
+                    alt="Simulation" 
+                /> <br>
+                <b> Github Source Files:</b>
+                <a href="https://github.com/jalikins/RISC5_Processor">
+                    Here
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="amain">
+        <div class="wrapper">
+          <div class="text_center">
+            <h3>
+              Extra Features
+            </h3>
+          </div>
+          <div class="wrapper_inner">
+            <div class="about_content flex flex_around">
+              <p class="h6">
+                After designing the processor, we implemented it on a pico FPGA board. Our team implemented the processor on FPGA hardware and developed a real-time visualization of its internal execution behavior. Rather than relying solely on simulation-based debugging, we slowed down the processor clock and exposed key aspects of the processor’s control flow directly through the iceBlinkPico’s  LEDs. This approach allowed us to observe the behavior in real time and see how the processor progresses through different stages of execution defined by different LEDs turning on. <br>
+                Attached is the full report, a link to a video of the slowed-clock processor, and github source files for both the physical implentation. <br>
+                <b>Report Link:</b>
+                <a href="https://www.overleaf.com/read/rhcmdmxycjhk#863e44">
+                    Here
+                </a> <br>
+                <b>Video Link:</b>
+                <a href="https://github.com/k-jayaswal/computer-architecture/blob/main/final/final_demo.mov">
+                    Here
+                </a> <br>
+                <b>Github Files:</b>
+                    <a href="https://github.com/k-jayaswal/computer-architecture/tree/main/final">
+                    Here
+                    </a> <br>
+
             </div>
           </div>
         </div>
