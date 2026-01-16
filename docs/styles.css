@@ -242,6 +242,16 @@ section#hero_riscv {
   --color-accent: #8a2be2;
 }
 
+section#hero_oat {
+  background: linear-gradient(rgba(89, 89, 227, 0.9), rgba(220, 220, 220, 0.9)),
+  url("/assets/CPU.jpg");
+  padding-bottom: 4px;
+  background-size: cover;
+  background-position: top;
+  background-attachment: scroll;
+  color: #fafafa;
+  --color-accent: #8a2be2;
+}
 /* About section */
 .about_content {
   padding: var(--space-xl) 0;
@@ -306,6 +316,12 @@ section#about {
 section#amain {
   background-color: #d4cccc;
   color: #16171c;
+  --color-accent: #ffd700;
+}
+
+section#amain_oat {
+  background-color: rgba(220, 220, 220, 0.9);
+  color: #050609;
   --color-accent: #ffd700;
 }
 
