@@ -255,7 +255,7 @@ section#hero_oat {
 
 section#hero_SLAUGHDER {
   background: linear-gradient(rgba(250, 0, 0, 0.9), rgba(255, 220, 220, 0.9)),
-  url("/assets/SLAUGHDER_HEADER.jpg");
+  url("\assets\SLAUGHDR_HEADER.png");
   padding-bottom: 4px;
   background-size: cover;
   background-position: top;
